@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get Grocery Savings Today</title>
+
+<style>
+body{
+font-family: Arial, sans-serif;
+background:#f5f5f5;
+margin:0;
+padding:0;
+text-align:center;
+}
+
+.container{
+max-width:500px;
+margin:auto;
+background:white;
+padding:25px;
+margin-top:40px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+h1{
+color:#2e7d32;
+font-size:26px;
+}
+
+.badge{
+background:#ff3d3d;
+color:white;
+display:inline-block;
+padding:6px 12px;
+border-radius:20px;
+font-size:14px;
+margin-bottom:10px;
+}
+
+.countdown{
+font-size:18px;
+font-weight:bold;
+color:#ff3d3d;
+margin:10px 0;
+}
+
+.btn{
+display:block;
+background:#2e7d32;
+color:white;
+text-decoration:none;
+padding:15px;
+border-radius:6px;
+font-size:18px;
+margin-top:15px;
+}
+
+.btn:hover{
+background:#1b5e20;
+}
+
+.proof{
+margin-top:20px;
+font-size:14px;
+color:#555;
+}
+
+.testimonial{
+background:#f8f8f8;
+padding:10px;
+border-radius:6px;
+margin-top:10px;
+}
+
+.footer{
+font-size:12px;
+margin-top:15px;
+color:#888;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="badge">LIMITED SPOTS AVAILABLE</div>
+
+<h1>Claim Your Grocery Rewards Today</h1>
+
+<p>Thousands of people are saving money on groceries by completing a quick verification.</p>
+
+<div class="countdown">
+Offer expires in: <span id="timer">04:59</span>
+</div>
+
+<a href="YOUR_CPA_LINK_HERE" class="btn">
+Check If You Qualify
+</a>
+
+<div class="proof">
+<strong>3,284 people</strong> claimed grocery rewards this week.
+</div>
+
+<div class="testimonial">
+⭐️⭐️⭐️⭐️⭐️  
+"I didn't believe it at first but after completing the steps I received my grocery reward. Super helpful!"  
+<br><b>- Amanda T.</b>
+</div>
+
+<div class="testimonial">
+⭐️⭐️⭐️⭐️⭐️  
+"Perfect timing with food prices going up. Took me less than 2 minutes."  
+<br><b>- Michael R.</b>
+</div>
+
+<div class="footer">
+Limited availability. Participation requirements may apply.
+</div>
+
+</div>
+
+<script>
+var time = 299;
+var timer = setInterval(function(){
+var minutes = Math.floor(time/60);
+var seconds = time % 60;
+seconds = seconds < 10 ? "0"+seconds : seconds;
+document.getElementById("timer").innerHTML = minutes + ":" + seconds;
+time--;
+if(time < 0){
+clearInterval(timer);
+document.getElementById("timer").innerHTML = "Expired";
+}
+},1000);
+</script>
+
+</body>
+</html>
